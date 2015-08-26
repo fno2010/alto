@@ -38,7 +38,7 @@
               org.opendaylight.alto.commons.*,
               org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.yang.ietf.inet.types.rev100924,
               org.apache.commons.logging,
-              com.sun.jersey.spi.container.servlet,
+              org.glassfish.jersey.servlet.*,
               javax.ws.rs,
               javax.ws.rs.core,
               javax.ws.rs.ext,
@@ -60,14 +60,15 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.opendaylight.controller.thirdparty</groupId>
-      <artifactId>com.sun.jersey.jersey-servlet</artifactId>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet</artifactId>
+      <version>${glassfish.jersey.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.opendaylight.controller</groupId>
-      <artifactId>commons.northbound</artifactId>
-      <version>${controller.commons.northbound.version}</version>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.servlet</artifactId>
+      <version>${glassfish.servlet.version}</version>
     </dependency>
 
     <dependency>
